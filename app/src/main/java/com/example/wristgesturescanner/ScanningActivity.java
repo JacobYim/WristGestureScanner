@@ -45,7 +45,7 @@ public class ScanningActivity extends AppCompatActivity {
         String str = intent.getStringExtra("gesture");
         gesture.setText(str);
 
-        File appDirectory = new File( getExternalFilesDir(null)+"/data" );
+        File appDirectory = new File( "/data/data/com.example.wristgesturescanner/data" );
         if ( !appDirectory.exists() ) {
             appDirectory.mkdirs();
             Log.e("INFO", "Created ... "+ appDirectory.getAbsolutePath());
@@ -82,6 +82,7 @@ public class ScanningActivity extends AppCompatActivity {
                 remainTime.setText("done!\n");
                 mSensorManager.unregisterListener(mGyroLis);
                 File file = new File(appDirectory, FileName);
+//                File file = new File(FileName);
                 OutputStream myOutput;
                 try {
                     myOutput = new BufferedOutputStream(new FileOutputStream(file,true));
