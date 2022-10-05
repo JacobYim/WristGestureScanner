@@ -21,27 +21,31 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/box_inset_layout_padding"
-                android:text="@string/title"
+                android:text="\n\n  Scan IMU Sensor"
                 android:textAlignment="center"
                 android:textSize="20sp" />
 
             <Button
-                android:id="@+id/upButton"
+                android:id="@+id/startButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/up" />
+                android:text="start" />
 
             <Button
-                android:id="@+id/downButton"
+                android:id="@+id/endButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/down" />
+                android:text="end" />
 
-            <Button
-                android:id="@+id/restButton"
+            <TextView
+                android:id="@+id/StatusText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/rest" />
+                android:layout_marginTop="@dimen/box_inset_layout_padding"
+                android:text="scan : x"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
         </LinearLayout>
     </ScrollView>
 
